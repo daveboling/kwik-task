@@ -15,30 +15,30 @@ sudo rm -rf ~/.npm
 rm -rf node_modules
 
 # installing new node modules
-npm install async --save
-npm install body-parser --save
-npm install express --save
-npm install express-method-override --save
-npm install underscore --save
-npm install mongodb --save
-npm install morgan --save
-npm install multiparty --save
-npm install express-session --save
-npm install connect-redis --save
-npm install bcrypt --save
-npm install chalk --save
-npm install request --save
+sudo npm install async --save
+sudo npm install body-parser --save
+sudo npm install express --save
+sudo npm install express-method-override --save
+sudo npm install underscore --save
+sudo npm install mongodb --save
+sudo npm install morgan --save
+sudo npm install multiparty --save
+sudo npm install express-session --save
+sudo npm install connect-redis --save
+sudo npm install bcrypt --save
+sudo npm install chalk --save
+sudo npm install request --save
 
-npm install grunt --save-dev
-npm install grunt-contrib-clean --save-dev
-npm install grunt-contrib-copy --save-dev
-npm install grunt-contrib-jade --save-dev
-npm install grunt-contrib-jshint --save-dev
-npm install grunt-contrib-less --save-dev
-npm install grunt-contrib-watch --save-dev
-npm install grunt-jscs --save-dev
-npm install grunt-shell --save-dev
-npm install jshint-stylish --save-dev
+sudo npm install grunt --save-dev
+sudo npm install grunt-contrib-clean --save-dev
+sudo npm install grunt-contrib-copy --save-dev
+sudo npm install grunt-contrib-jade --save-dev
+sudo npm install grunt-contrib-jshint --save-dev
+sudo npm install grunt-contrib-less --save-dev
+sudo npm install grunt-contrib-watch --save-dev
+sudo npm install grunt-jscs --save-dev
+sudo npm install grunt-shell --save-dev
+sudo npm install jshint-stylish --save-dev
 
 # installing new bower components
 bower install angular#1.3.0-rc.0 --save

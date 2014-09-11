@@ -1,9 +1,9 @@
 {
-  "name": "mean-template",
+  "name": "kwik-task",
   "version": "0.0.0",
-  "homepage": "https://github.com/chyld/mean-template",
+  "homepage": "https://github.com/kadowki/mean-template",
   "authors": [
-    "Chyld Medford <chyld.medford@gmail.com>"
+    "David Boling <kadowki@gmail.com>"
   ],
   "description": "The MEAN Template",
   "license": "MIT",
