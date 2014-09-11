@@ -1,0 +1,54 @@
+h2 Tasks Page Success
+.row
+  .col-xs-4
+  .col-xs-4
+    form(novalidate, name='taskForm')
+      .form-group
+        label Task Name
+        input.form-control(name='name' ng-model='task.name', type='text', required, ng-minlength='3', ng-maxlength='10')
+      .form-group
+        label Due
+        input.form-control(name='date' ng-model='task.date', type='date', required)
+      .form-group
+        select.fullWidth(ng-model='task.priority', required)
+          option(ng-repeat='p in priorities' value='{{p}}' ) {{p.name}}
+      .form-group 
+        button.btn.btn-primary.btn-lg.fullWidth(type='button' ng-show='taskForm.$valid', ng-click='addTask()') Save
+  .col-xs-4
+  .row
+    table.table
+      tr
+        th Name
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='name')
+              span &#x25B2;
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='-name')
+              span &#x25BC;
+        th Date 
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='due')
+              span &#x25B2;
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='-due')
+              span &#x25BC;
+        th Priority
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='priority.name')
+              span &#x25B2;
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='-priority.name')
+              span &#x25BC;
+        th Complete
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='isComplete')
+              span &#x25B2;
+          .radio
+              input(name='sort', type='radio', ng-model='sort', value='-isComplete')
+              span &#x25BC;
+        tr(ng-repeat='t in tasks | orderBy: sort')
+          td {{t.name}}
+          td {{t.due | date}}
+          td {{t.priority.name}}
+          td(ng-style='{"background-color": t.priority.color, "color": "white"}') {{(t.isComplete) ? 'Yes' : 'No'}}
+            input(type='checkbox', ng-model='isComplete' ng-hide='t.isComplete')

@@ -1,0 +1,30 @@
+h2 {{title}}
+.row
+  .col-xs-4
+  .col-xs-4
+    form(novalidate, name='priorityForm')
+      .form-group
+        label Priority Name
+        input.form-control(ng-model='priority.name', type='text', required, ng-minlength='3', ng-maxlength='10')
+      .form-group
+        label Color
+        input.form-control(ng-model='priority.color', type='color', required)
+      .form-group
+        button.btn.btn-primary.btn-lg.fullWidth(type='button' ng-show='priorityForm.$valid', ng-click='addPriority()') Save
+  .col-xs-4
+  .row
+    .radio
+      label
+        input(name='sort', type='radio', ng-model='sort', value='name')
+        span Ascending
+    .radio
+      label
+        input(name='sort', type='radio', ng-model='sort', value='-name')
+        span Descending
+    table.table
+      tr
+        th Name
+        th Color
+        tr(ng-repeat='p in priorities | orderBy: sort')
+          td {{p.name}}
+          td(style='background-color: {{p.color}}')
